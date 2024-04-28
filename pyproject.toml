@@ -6,10 +6,22 @@ authors = ["Slava Golyshevskii <sgolyshevskii@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.12"
 black = "24.4.2"
 isort = "5.13.2"
 flake8 = "7.0.0"
+apache-airflow = "2.8.3"
+airflow-dbt-python = {version = "2.0.0", extras = ["postgres"]}
+psycopg2 = "2.9.9"
+pandas = "2.1.4"
+sqlalchemy = "1.4.52"
+dbt-core = "1.7.5"
+dbt-postgres = "1.7.5"
+gspread = "5.12.4"
+gspread-pandas = "3.3.0"
+openpyxl = "3.1.2"
+sshtunnel = "0.4.0"
+python-telegram-bot = "13.15"
 
 
 [tool.black]
