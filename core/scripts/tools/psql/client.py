@@ -5,6 +5,13 @@ from sqlalchemy import create_engine
 
 
 class PSQLClient:
+    """
+    Class for working with PostgreSQL database
+
+    Attributes:
+        engine: SQLAlchemy engine
+    """
+
     def __init__(self, conn_str: str):
         self.engine = create_engine(conn_str)
 
