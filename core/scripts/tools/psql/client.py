@@ -1,13 +1,13 @@
 import pandas as pd
-from sqlalchemy import create_engine
-from scripts.objects.logger import logger
 from config import PATH
+from scripts.objects.logger import logger
+from sqlalchemy import create_engine
 
 
 class PSQLClient:
     def __init__(self, conn_str: str):
         self.engine = create_engine(conn_str)
-    
+
     def _is_sql_file(self, sql: str) -> str:
         """
         Checks if query is a SQL file
@@ -23,15 +23,14 @@ class PSQLClient:
     def select(self, sql: str) -> pd.DataFrame:
         """
         Selects data from database
-        
+
         Params:
             query: SQL SELECT query
         """
-        logger.info(f"START")
+        logger.info("START")
 
         data = pd.read_sql(sql=self._is_sql_file(sql), con=self.engine)
 
         logger.info(f"Data has been extracted successfully. Shape: {data.shape}")
-        logger.info(f"FINISH")
+        logger.info("FINISH")
         return data
-        

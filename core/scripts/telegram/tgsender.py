@@ -12,5 +12,5 @@ class TelegramMessageSender(MessageSender):
         logger.info(f"Sending chat {self.chat_id} message...")
 
         self.bot.send_message(chat_id=self.chat_id, text=message)
-        
-        logger.info(f"Message has been sent successfully")
+
+        logger.info("Message has been sent successfully")
