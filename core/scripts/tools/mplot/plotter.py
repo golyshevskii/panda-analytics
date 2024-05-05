@@ -77,7 +77,7 @@ class MetricPhotoPlotter(Plotter):
             **self.metrics["date"],
         )
         plt.subplots_adjust(
-            left=0, right=0.5, bottom=0.4, top=0.85, wspace=0.33, hspace=0.33
+            left=0, right=0.4, bottom=0.4, top=0.85, wspace=0.33, hspace=0.33
         )
 
         axs = axs.flatten() if metrics_prow > 1 else axs

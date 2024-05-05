@@ -23,6 +23,6 @@ def plot_daily_metrics(config_path: str):
 
     # Plot metrics
     plotter = MetricPhotoPlotter(metrics=metrics.to_dict(orient="records")[0])
-    plotter.plot(file=config["photo"], metrics_prow=3)
+    plotter.plot(file=config["photo"], metrics_prow=2)
 
     logger.info("END")
