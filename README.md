@@ -1,4 +1,4 @@
-![Panda](docs/media/pa32x32.png) Panda Analytics [![Telegram](https://img.shields.io/badge/Telegram-Channel-blue.svg?logo=telegram)](https://t.me/panda_analytics)
+[![Panda](docs/media/pa32x32.png)](https://t.me/panda_analytics) Panda Analytics [![Telegram](https://img.shields.io/badge/Telegram-Channel-blue.svg?logo=telegram)](https://t.me/panda_analytics)
 ===
 
 [![airflow](https://img.shields.io/badge/airflow-2.8.3-fcf879)](https://airflow.apache.org/) [![Python Version](https://img.shields.io/badge/python-3.11-2241b3)](https://docs.python.org/3.11/) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
