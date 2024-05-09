@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from config import PATH
+from matplotlib.axes import Axes
 from matplotlib.font_manager import FontProperties
 from matplotlib.patches import FancyBboxPatch
 from scripts.objects.logger import logger
@@ -23,17 +24,23 @@ class MetricPhotoPlotter(Plotter):
             file: Path of the PNG file where metrics will be saved
         """
         plt.savefig(f"{PATH}{file}", dpi=300, bbox_inches="tight")
-        logger.info(f"Metrics has been saved to {file}")
+        logger.info(f"Metrics has been saved to the {file}")
 
         plt.close()
 
-    def _rx(self, ax, value) -> float:
-        """Returns the right edge of the given axes, in figure coordinates."""
+    def _rx(self, ax: Axes, value) -> float:
+        """Returns the right edge of the given axes object"""
         ax.figure.canvas.draw()
         bbox = value.get_window_extent().transformed(ax.transAxes.inverted())
         return bbox.x1
 
-    def _set_ax(self, ax):
+    def _set_ax(self, ax: Axes):
+        """
+        Sets the axis layout
+
+        Params:
+            ax: Axes object
+        """
         ax.set_facecolor("white")
         ax.set_box_aspect(1 / 2)
         ax.axis("off")
@@ -82,6 +89,7 @@ class MetricPhotoPlotter(Plotter):
 
         axs = axs.flatten() if metrics_prow > 1 else axs
 
+        logger.info("Plotting metrics...")
         for ax, metric in zip(axs, self.metrics["metrics"]):
             self._set_ax(ax)
 

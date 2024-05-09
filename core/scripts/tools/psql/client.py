@@ -34,10 +34,8 @@ class PSQLClient:
         Params:
             query: SQL SELECT query
         """
-        logger.info("START")
-
+        logger.info("Selecting data from database...")
         data = pd.read_sql(sql=self._is_sql_file(sql), con=self.engine)
 
         logger.info(f"Data has been extracted successfully. Shape: {data.shape}")
-        logger.info("FINISH")
         return data

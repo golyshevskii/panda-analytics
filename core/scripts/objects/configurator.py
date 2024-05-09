@@ -10,10 +10,10 @@ class Configurator:
         config: Config imported from yaml file
     """
 
-    def __init__(self, config_path):
+    def __init__(self, config_path: str):
         self.config = self._import_config(config_path)
 
-    def _import_config(self, yaml_path) -> dict:
+    def _import_config(self, yaml_path: str) -> dict:
         """
         Imports config from yaml file
 
