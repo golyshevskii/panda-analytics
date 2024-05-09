@@ -11,7 +11,7 @@ class Formatter:
     def __init__(self, template_path: str):
         self.template = self._import_template(template_path)
 
-    def _import_template(self, template_path) -> str:
+    def _import_template(self, template_path: str) -> str:
         """
         Imports template from file
 

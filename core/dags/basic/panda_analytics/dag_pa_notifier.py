@@ -34,7 +34,7 @@ with DAG(
     )
 
     notify__by_photo = PythonOperator(
-        task_id="notify",
+        task_id="notify__by_photo",
         python_callable=notify_by_photo,
         op_kwargs={"config_path": CONFIG_PATH},
     )
