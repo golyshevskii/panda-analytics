@@ -42,7 +42,7 @@ class MetricPhotoPlotter(Plotter):
             ax: Axes object
         """
         ax.set_facecolor("white")
-        ax.set_box_aspect(1 / 2)
+        ax.set_box_aspect(1 / 2) # TODO: dynamic box aspect
         ax.axis("off")
 
         bbox = FancyBboxPatch(
