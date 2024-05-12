@@ -77,7 +77,7 @@ class MetricPhotoPlotter(Plotter):
         fig.set_facecolor("#f0f0f0")
         fig.text(
             x=0,
-            y=0.9,
+            y=0.87,
             ha="left",
             va="bottom",
             fontproperties=self.font,
@@ -94,15 +94,15 @@ class MetricPhotoPlotter(Plotter):
             self._set_ax(ax)
 
             ax.text(
-                x=0.05,
+                x=0.01,
                 y=0.7,
                 ha="left",
                 va="bottom",
                 fontproperties=self.font,
                 **metric["metric"],
             )
-            value = ax.text(
-                x=0.05,
+            ax.text(
+                x=0.01,
                 y=0.2,
                 ha="left",
                 va="bottom",
@@ -110,9 +110,9 @@ class MetricPhotoPlotter(Plotter):
                 **metric["value"],
             )
             ax.text(
-                x=self._rx(ax, value) + 0.055,
+                x=0.95,
                 y=0.305,
-                ha="left",
+                ha="right",
                 va="bottom",
                 fontproperties=self.font,
                 **metric["change"],
