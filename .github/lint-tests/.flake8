@@ -1,0 +1,39 @@
+[flake8]
+max-line-length=88
+max-name-length=40
+max-arguments=10
+max-imports=20
+max-import-from-members=10
+max-expressions=10
+max-methods=10
+max-try-body-length=10
+
+max-cognitive-average=10
+max-cognitive-score=30
+max-line-complexity=15
+max-complexity=25
+count=true
+
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    venv
+
+ignore=
+    E203,
+    E402,
+    E501,
+    D100,
+    D104,
+    D105,
+    D106,
+    D107,
+    DAR201,
+    D401,
+    N818,
+    P103,
+    W291,
+    W503,
+    W605

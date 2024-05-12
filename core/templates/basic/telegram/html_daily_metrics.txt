@@ -1,0 +1,5 @@
+<b>Daily Metrics Report</b><pre>
+Revenue: {revenue} ({revenue_growth})
+Costs:   {costs} ({costs_growth})
+</pre>
+<a href="{dash_link}">View the Full Dashboard <tg-emoji emoji-id="5368324170671202286">📊</tg-emoji></a>

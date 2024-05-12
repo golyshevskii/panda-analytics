@@ -1,0 +1,1 @@
+<a href="{dashboard}"><b>Daily Metrics Report</b> <tg-emoji emoji-id="5368324170671202286">📊</tg-emoji></a>

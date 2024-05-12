@@ -1,0 +1,11 @@
+package: basic
+psql-db: padwh
+metrics: sql/basic/panda_analytics/psql_select_daily_basic_metrics.sql
+message: templates/basic/telegram/html_daily_metrics.txt
+caption: templates/basic/telegram/html_caption_daily_metrics.txt
+photo: media/basic/panda_analytics/daily_metrics.png
+dashboard: https://datalens.yandex/gwhgbfuhx9944
+notification:
+  target: telegram
+  channels:
+    - "@panda_analytics"
