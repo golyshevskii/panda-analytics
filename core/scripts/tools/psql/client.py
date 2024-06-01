@@ -56,12 +56,12 @@ class PSQLClient:
                     constraint → Constraint name for the ON CONFLICT clause, default None
                     pkeys → List of primary keys for the ON CONFLICT clause, default None
         """
-        logger.info("Inserting data into database...")
+        logger.info(f"Inserting data into {schema}.{table}...")
 
         if isinstance(data, pd.DataFrame):
             data.to_sql(
                 schema=schema,
-                table=table,
+                name=table,
                 con=self.engine,
                 if_exists=kwargs.get("if_exists", "append"),
                 index=kwargs.get("index", False),
@@ -73,7 +73,6 @@ class PSQLClient:
         with connect(self.conn_str) as conn:
             with conn.cursor() as cur:
                 SQL = self._iquery(schema=schema, table=table, data=data, **kwargs)
-
                 execute_batch(cur=cur, sql=SQL, argslist=data, page_size=1000)
                 conn.commit()
 
