@@ -1,5 +1,5 @@
 SELECT '{
-  "s": "Daily metrics → May 8, 2024",
+  "s": "Ежедневный отчёт: 12 Мая, 2024",
   "fontsize": 10,
   "alpha": 0.8
 }'::jsonb AS        date,
@@ -11,16 +11,16 @@ SELECT '{
              "alpha": 0.7
            },
            "value": {
-             "s": "457.74k",
+             "s": "633.91k",
              "fontsize": 15,
              "fontweight": "bold"
            },
            "change": {
-             "s": "↓ 65%%",
+             "s": "↑ 38%%",
              "fontsize": 7,
-             "color": "red",
+             "color": "green",
              "bbox": {
-               "facecolor": "red",
+               "facecolor": "green",
                "edgecolor": "grey",
                "alpha": 0.15,
                "linewidth": 0.1,
@@ -35,16 +35,16 @@ SELECT '{
              "alpha": 0.7
            },
            "value": {
-             "s": "276",
+             "s": "381",
              "fontsize": 15,
              "fontweight": "bold"
            },
            "change": {
-             "s": "↓ 77%%",
+             "s": "↑ 38%%",
              "fontsize": 7,
-             "color": "red",
+             "color": "green",
              "bbox": {
-               "facecolor": "red",
+               "facecolor": "green",
                "edgecolor": "grey",
                "alpha": 0.15,
                "linewidth": 0.1,
@@ -59,16 +59,16 @@ SELECT '{
              "alpha": 0.7
            },
            "value": {
-             "s": "15.33k",
+             "s": "17.22k",
              "fontsize": 15,
              "fontweight": "bold"
            },
            "change": {
-             "s": "↓ 25%%",
+             "s": "↑ 12%%",
              "fontsize": 7,
-             "color": "green",
+             "color": "red",
              "bbox": {
-               "facecolor": "green",
+               "facecolor": "red",
                "edgecolor": "grey",
                "alpha": 0.15,
                "linewidth": 0.1,
@@ -83,12 +83,12 @@ SELECT '{
              "alpha": 0.7
            },
            "value": {
-             "s": "2.70%%",
+             "s": "2.00%%",
              "fontsize": 15,
              "fontweight": "bold"
            },
            "change": {
-             "s": "↓ 41%%",
+             "s": "↓ 26%%",
              "fontsize": 7,
              "color": "green",
              "bbox": {
@@ -107,16 +107,16 @@ SELECT '{
              "alpha": 0.7
            },
            "value": {
-             "s": "14.90k",
+             "s": "16.79k",
              "fontsize": 15,
              "fontweight": "bold"
            },
            "change": {
-             "s": "↓ 28%%",
+             "s": "↑ 13%%",
              "fontsize": 7,
-             "color": "green",
+             "color": "red",
              "bbox": {
-               "facecolor": "green",
+               "facecolor": "red",
                "edgecolor": "grey",
                "alpha": 0.15,
                "linewidth": 0.1,
@@ -131,16 +131,16 @@ SELECT '{
              "alpha": 0.7
            },
            "value": {
-             "s": "157",
+             "s": "630",
              "fontsize": 15,
              "fontweight": "bold"
            },
            "change": {
-             "s": "↓ 431%%",
+             "s": "↑ 301%%",
              "fontsize": 7,
-             "color": "green",
+             "color": "red",
              "bbox": {
-               "facecolor": "green",
+               "facecolor": "red",
                "edgecolor": "grey",
                "alpha": 0.15,
                "linewidth": 0.1,
@@ -155,16 +155,16 @@ SELECT '{
              "alpha": 0.7
            },
            "value": {
-             "s": "95.23k",
+             "s": "130.73k",
              "fontsize": 15,
              "fontweight": "bold"
            },
            "change": {
-             "s": "↓ 57%%",
+             "s": "↑ 37%%",
              "fontsize": 7,
-             "color": "green",
+             "color": "red",
              "bbox": {
-               "facecolor": "green",
+               "facecolor": "red",
                "edgecolor": "grey",
                "alpha": 0.15,
                "linewidth": 0.1,
@@ -179,16 +179,16 @@ SELECT '{
              "alpha": 0.7
            },
            "value": {
-             "s": "21.50%%",
+             "s": "21.20%%",
              "fontsize": 15,
              "fontweight": "bold"
            },
            "change": {
-             "s": "↑ 6%%",
+             "s": "↓ 1%%",
              "fontsize": 7,
-             "color": "red",
+             "color": "green",
              "bbox": {
-               "facecolor": "red",
+               "facecolor": "green",
                "edgecolor": "grey",
                "alpha": 0.15,
                "linewidth": 0.1,
