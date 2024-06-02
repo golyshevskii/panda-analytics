@@ -25,7 +25,7 @@ class WBClient:
         headers: dict = None,
         params: dict = None,
         json: Union[dict, List] = None,
-    ) -> Tuple[int, dict]:
+    ) -> Tuple[int, List[dict]]:
         """
         Makes a request to WB API
 

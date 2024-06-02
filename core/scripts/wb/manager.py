@@ -28,3 +28,27 @@ def import_statistics(seller_id: str, entity: str, **kwargs) -> None:
     psql_client.insert(schema=SCHEMA, table=STATISTICS_TABLES[entity], data=data)
 
     logger.info("Statistics have been imported")
+
+
+def import_sales_report(seller_id: str, date_from: str, date_to: str) -> None:
+    """
+    Imports sales report of a WB seller to the database
+
+    Params:
+        seller_id: ID of the customer
+        date_from: Date from which to get data. Format: YYYY-MM-DDTHH:MM:SS
+        date_to: Date to which to get data. Format: YYYY-MM-DDTHH:MM:SS
+    """
+    logger.info(f"Importing sales report for customer {seller_id}")
+
+    wb_client = WBClient(api_token=WB_API_TOKENS[seller_id])
+    statistics = Statistics(client=wb_client)
+
+    _, data = statistics.get_sales_report(date_from=date_from, date_to=date_to)
+
+    psql_client = PSQLClient(conn_str=PADWH_CONN)
+    psql_client.insert(
+        schema=SCHEMA, table=STATISTICS_TABLES["sales_report"], data=data
+    )
+
+    logger.info("Sales report has been imported")
