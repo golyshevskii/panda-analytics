@@ -66,7 +66,7 @@ class WBClient:
         response_status = response.status_code
         response_details = response.json()
 
-        if response_status in (400, 401, 429):
+        if response_status in (400, 401, 403, 429):
             raise Exception(
                 f"Status Code: {response_status}. "
                 f"Response details → {response_details}"

@@ -56,7 +56,7 @@ class PSQLClient:
                     constraint → Constraint name for the ON CONFLICT clause, default None
                     pkeys → List of primary keys for the ON CONFLICT clause, default None
         """
-        logger.info(f"Inserting data into {schema}.{table}...")
+        logger.info(f"Inserting data into the {schema}.{table}...")
 
         if isinstance(data, pd.DataFrame):
             data.to_sql(
