@@ -4,12 +4,32 @@ from typing import List, Tuple
 from scripts.objects.logger import logger
 from scripts.wb.client import WBClient
 
-STATISTICS_TABLES = {
-    "incomes": "wb_statistics_incomes",
-    "stocks": "wb_statistics_stocks",
-    "orders": "wb_statistics_orders",
-    "sales": "wb_statistics_sales",
-    "sales_report": "wb_statistics_sales_report",
+STATISTICS_ENTITIES = {
+    "incomes": {
+        "schema": "raw",
+        "table": "wb_statistics_incomes",
+        "unique_key": "wb_statistics_incomes_unique_key",
+    },
+    "stocks": {
+        "schema": "raw",
+        "table": "wb_statistics_stocks",
+        "unique_key": "wb_statistics_stocks_unique_key",
+    },
+    "orders": {
+        "schema": "raw",
+        "table": "wb_statistics_orders",
+        "unique_key": "wb_statistics_orders_unique_key",
+    },
+    "sales": {
+        "schema": "raw",
+        "table": "wb_statistics_sales",
+        "unique_key": "wb_statistics_sales_unique_key",
+    },
+    "sales_report": {
+        "schema": "raw",
+        "table": "wb_statistics_sales_report",
+        "unique_key": "wb_statistics_sales_report_unique_key",
+    },
 }
 
 
@@ -94,6 +114,8 @@ class Statistics:
 
             data.extend(report_part)
             rrdid = report_part[-1]["rrd_id"]
+
+            logger.info("Sleep for 1 minute to avoid rate limit...")
             sleep(61)
 
         logger.info("Sales report has been received")
